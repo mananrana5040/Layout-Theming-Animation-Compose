@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Layout and Theming</string>
+    <string name="title_activity_splash">SplashActivity</string>
+</resources>

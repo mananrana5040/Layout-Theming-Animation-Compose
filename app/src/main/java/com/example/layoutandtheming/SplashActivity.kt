@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -50,15 +51,14 @@ class SplashActivity : ComponentActivity() {
                 finish()
             })
         }
-
-
+        
     }
 }
 
 @Composable
 fun Splash(onTimeout: () -> Unit) {
 
-    var progress by remember { mutableFloatStateOf(0f) }
+    var progress by remember { mutableFloatStateOf(0.5f) }
 
     val animatedProgress by animateFloatAsState(
         targetValue = progress,
@@ -105,7 +105,6 @@ fun Splash(onTimeout: () -> Unit) {
             gapSize = 0.dp,
             drawStopIndicator = {}
         )
-
 
     }
 
